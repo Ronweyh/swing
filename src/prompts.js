@@ -1,7 +1,7 @@
-const prompts = [
+const newProjectPrompts = [
     {
         type: 'list',
-        name: 'tplType',
+        name: 'type',
         message: '选择需要的模板',
         choices: [
             'electron',
@@ -10,4 +10,6 @@ const prompts = [
     }
 ]
 
-module.exports = prompts
+module.exports = {
+    newProjectPrompts
+}

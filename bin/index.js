@@ -2,10 +2,15 @@
 const { program } = require('commander')
 const figlet = require('figlet')
 const { log } = require('../src/utils')
-const interface = require('../src/interface')
+const userModule = require('../src/module')
+const pkg = require('../package.json')
 
 log('blueBright', figlet.textSync('ROMANDAR'))
 
-program.version('1.0.0', '-v, --version')
+program.version(pkg.version, '-v, --version');
+program.command('new [name]').description('Create project template by specify type.')
+.action(name => {
+    userModule.generateTemplates(name)
+})
 
 program.parse(process.argv)

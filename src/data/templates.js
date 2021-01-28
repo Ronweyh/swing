@@ -1,3 +1,3 @@
 module.exports = {
-    electron: 'https://github.com/shelljs/shelljs.git'
+    electron: 'rohye/electron-templates#master'
 }
