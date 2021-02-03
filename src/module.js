@@ -4,6 +4,7 @@ const { log } = require('./utils')
 const templateUrls = require('./data/templates')
 const download = require('download-git-repo')
 const createSpinner = require('./utils/spinner')
+const shell = require('shelljs')
 
 class Module {
     init() {
@@ -20,7 +21,6 @@ class Module {
             }
             // 1. 下载模板
             this.downloadTpl(type, name)
-            // 2. 写入到当前文件夹
         })
     }
 
@@ -41,7 +41,17 @@ class Module {
                 return;
             }
             spinner.succeed()
+            this.installPackages(name)
         })
+    }
+
+    installPackages(name) {
+        const spinner = createSpinner(`Auto install packages in ${name} \n`)
+        spinner.start()
+        // 下载完后自动安装依赖
+        shell.cd(name)
+        shell.exec('yarn install')
+        spinner.succeed()
     }
 }
 
