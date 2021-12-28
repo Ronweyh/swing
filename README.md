@@ -5,8 +5,8 @@ Help to create templates of project. For now, it's experimental, maybe for produ
 # How to use
 Run command below in directory where you wanna create project.
 
-my-app is project name whatever you want.
+`my-app` is project name whatever you want.
 
 ```bash
-npx romandar new my-app
+npx @swing/cli new my-app
 ```
