@@ -1,0 +1,33 @@
+{
+    "name": "@swing/cli",
+    "version": "0.0.1",
+    "description": "A command-line interfaces",
+    "main": "index.js",
+    "workspaces": [
+        "packages",
+        "scripts"
+    ],
+    "bin": {
+      "swing": "bin/index.js"
+    },
+    "files": ["bin", "libs", "package.json"],
+    "scripts": {
+      "test": "@swing/cli --help"
+    },
+    "keywords": [
+      "command"
+    ],
+    "author": "rohye",
+    "license": "MIT",
+    "dependencies": {
+      "chalk": "^4.1.2",
+      "commander": "^8.3.0",
+      "download-git-repo": "^3.0.2",
+      "figlet": "^1.5.0",
+      "inquirer": "^8.2.0",
+      "ora": "^5.4.1",
+      "progress": "^2.0.3",
+      "shelljs": "^0.8.4"
+    }
+  }
+  

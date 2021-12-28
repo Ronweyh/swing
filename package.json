@@ -1,28 +1,23 @@
 {
-  "name": "romandar",
-  "version": "0.0.1",
-  "description": "A command-line interfaces",
-  "main": "index.js",
-  "bin": {
-    "romandar": "bin/index.js"
-  },
-  "files": ["./bin", "./src", "package.json"],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "command"
-  ],
-  "author": "rohye",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^5.0.0",
-    "commander": "^8.3.0",
-    "download-git-repo": "^3.0.2",
-    "figlet": "^1.5.0",
-    "inquirer": "^8.2.0",
-    "ora": "^6.0.1",
-    "progress": "^2.0.3",
-    "shelljs": "^0.8.4"
-  }
+    "name": "swing",
+    "version": "0.0.1",
+    "private": true,
+    "description": "A series tools for fe",
+    "workspaces": [
+        "packages/*",
+        "scripts/*"
+    ],
+    "scripts": {
+        "postinstall": "lerna bootstrap",
+        "test": "swing --help"
+    },
+    "keywords": [
+        "tool",
+        "fe"
+    ],
+    "author": "rohye",
+    "license": "MIT",
+    "devDependencies": {
+        "lerna": "^4.0.0"
+    }
 }

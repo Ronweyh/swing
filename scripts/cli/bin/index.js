@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 const { program } = require('commander')
 const figlet = require('figlet')
-const { log } = require('../src/utils')
-const userModule = require('../src/module')
-const test = require('../src/test')
+const { log } = require('../libs/utils')
+const userModule = require('../libs/module')
+const test = require('../libs/test')
 const pkg = require('../package.json')
 
-log('blueBright', figlet.textSync('ROMANDAR'))
+log('blueBright', figlet.textSync('swing'))
 
 program.version(pkg.version, '-v, --version');
 program.command('new [name]').description('Create project template by specific type.')
