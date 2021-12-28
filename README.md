@@ -8,5 +8,5 @@ Run command below in directory where you wanna create project.
 `my-app` is project name whatever you want.
 
 ```bash
-npx @swing/cli new my-app
+npx rswing new my-app
 ```
