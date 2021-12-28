@@ -1,5 +1,5 @@
 {
-    "name": "@swing/cli",
+    "name": "rswing",
     "version": "0.0.1",
     "description": "A command-line interfaces",
     "main": "index.js",
@@ -7,6 +7,10 @@
         "packages",
         "scripts"
     ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
     "bin": {
       "swing": "bin/index.js"
     },
