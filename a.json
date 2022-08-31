@@ -1,0 +1,29 @@
+const body = JSON.parse($response.body);
+console.log("body::: ", body);
+$done({
+  body: JSON.stringify({
+    errcode: 0,
+    errmsg: "",
+    detailErrMsg: null,
+    data: {
+      currentTime: "2022-08-31 19:30:33",
+      records: [
+        {
+          personKey: null,
+          sampleCode: null,
+          sampleType: null,
+          sampleTime: "2022-08-30 09:30:11",
+          testResultType: 2,
+          name: null,
+          idNo: "3607**********1015",
+          idType: "1",
+          jcjgmc: "深圳聚合医学检验实验室",
+          testResultDesc: "阴性",
+          reportTime: "2022-08-30 13:19:24",
+        }
+      ],
+    },
+    hint: null,
+  })
+});
+console.log('res::: ', $response.body)
